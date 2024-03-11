@@ -1,0 +1,194 @@
+﻿@model Seguros.WebApp.Models.Seguro;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+
+    <h2 class="mt-5 mb-2">
+        Seguros
+    </h2>
+
+    <div class="row mt-5 mb-5">
+        
+        <div class="col-md-8">
+            <label asp-for="Seguradora" class="control-label"><strong>Seguradora</strong></label>
+            <input asp-for="Seguradora" class="form-control txtInputSeguradora" />
+        </div>
+
+        <div class="col-md-4">
+            <label asp-for="NumeroApolice" class="control-label"><strong>Número da Apólice</strong></label>
+            <input asp-for="NumeroApolice" class="form-control txtNumeroApolice" /> 
+        </div>
+
+    </div>
+
+    <div class="row mt-5 mb-5">
+            
+        <div class="col-md-8"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <input id="btnAddCobertura" value="Adcionar Cobertura" class="btn btn-secondary m-0 p-1" />
+        </div>            
+
+    </div>
+
+    <div class="row mt-5 mb-5">
+            
+        <div class="col-md-8">
+            <strong>Cobertura</strong>
+        </div>
+
+        <div class="col-md-2">
+            <strong>Capital segurado</strong>
+        </div>
+
+        <div class="col-md-2"></div>            
+
+    </div>        
+
+    <div class='area-cobertura'>
+
+        <div class="row mt-5 mb-5 tmpl-cobertura">
+                
+            <div class="col-md-8">
+                <input type="text" class="form-control txtCobertura" />
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control txtCapitalSegurado" />
+            </div>
+            <div class="col-md-2">
+                <input value="Excluir" class="btn btn-danger m-0 p-1 btnExlcuirCobertura" />
+            </div>            
+
+        </div>     
+
+    </div>
+
+
+    <div class="row mt-5 mb-5">
+
+            <div class="col-md-10">
+
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><strong>Há beneficiários indicados?</strong></label>
+            </div>
+
+        </div>
+
+            <div class="col-md-2">
+            <input id="btnAddBeneficiario" value="Adicionar Beneficiário" class="btn btn-secondary m-0 p-1" />
+        </div>
+
+    </div>
+
+
+    <div class='wrapperBene' style='display:none;'>
+
+        <div class="row mt-5 mb-5">
+                <div class="col-md-8">
+                <strong>Beneficiário</strong>
+            </div>
+            <div class="col-md-2">
+                <strong>% do benefício</strong>
+            </div>
+                <div class="col-md-2">
+                &nbsp
+            </div>            
+
+        </div>        
+
+        <div class='area-beneficiario'></div>
+
+            <div class="row mt-5 mb-5 tmpl-beneficiario">
+                    
+                <div class="col-md-8">    
+                    <input type="text" class="form-control txtBeneficiario" />
+                </div>
+                
+                <div class="col-md-2">
+                    <input type="text" class="form-control txtPercentualBeneficiario" />           
+                </div>
+                
+                <div class="col-md-2">
+                    <input value="Excluir" class="btn btn-danger m-0 p-1 btnExlcuirBene" />
+                </div>            
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row mt-5 mb-5">
+            
+        <div class="col-md-8" style="text-align:right;">
+            <strong>Total</strong>
+        </div>
+        
+        <div class="col-md-2" style="text-align:center; color:#F00">
+            <strong>0%</strong>
+        </div>
+        
+        <div class="col-md-2"></div>            
+
+    </div> 
+
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4">
+
+            <div class="form-group">
+                <label asp-for="DataAquisicaoApolice" class="control-label"><strong>Data da Aquisição da Apólice</strong></label>
+                <input asp-for="DataAquisicaoApolice" class="form-control" />
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="form-group">
+                <label asp-for="ValorPremio" class="control-label"><strong>Valor do Prêmio</strong></label>
+                <input asp-for="ValorPremio" class="form-control" />
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="form-group">
+                <label asp-for="Frequencia" class="control-label"><strong>Frequência de pagamento</strong></label>
+                <input asp-for="Frequencia" class="form-control" />
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="row mt-5 mb-5">
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Porque" class="control-label"><strong>Porque você a adquiriu? Está satisfeito com esta apólice?</strong></label>
+                <textarea asp-for="Porque" class="form-control"></textarea>
+            </div>   
+        </div>
+
+    </div>
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-8"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <input id="btnAddExcluirItem" value="Excluir Item" class="btn btn-danger m-0 p-1"/>
+        </div>            
+    </div>   
+
+</div>
+
+
+
+
+
